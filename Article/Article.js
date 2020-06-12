@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Allan is Pretty cool',
+    date: 'Jun 11th, 2020',
+    firstParagraph: `small paragraph? `,
+
+    secondParagraph: `even smaller`,
+
+    thirdParagraph: `smallest`
   }
 ];
 
@@ -113,12 +122,10 @@ const data = [
 */
 
 const articles = document.querySelector(".articles")
-let i = 0
-
 
 function articleMaker(obj) {
     const newArticle = document.createElement("div")
-    newArticle.classList = "article"
+    newArticle.className = "article"
     newArticle.innerHTML += `
       <h2>${obj.title}</h2>
       <p class="date">${obj.date}</p>
@@ -140,9 +147,7 @@ document.querySelectorAll(".expandButton").forEach((el, i) => {
     document.querySelectorAll(".article")[i].classList.toggle("article-open")
   })
 })
-// function toggle(event) {
-//   console.log(event.target)
-// }
+
 
 
 
